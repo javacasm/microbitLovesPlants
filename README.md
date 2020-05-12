@@ -8,7 +8,7 @@ Take care (in the STEAM way) of  plants/small garden using micro:bit
 * Using [micro:bit watering kit](https://www.digitspace.com/products/micro-bit/kit/microbit-kit-automatic-watering-pump-soil-humidity-detection-with-main-board?5bf8797b7ae48ca3)
 * [Some temperature sensors (DHT22 or GY-21-HTU21)](https://www.digitspace.com/sensor-kit-with-45-sensors?5bf8797b7ae48ca3)
 * [Light sensors (LDR)](https://www.digitspace.com/sensor-kit-with-45-sensors?5bf8797b7ae48ca3) 
-* [Uv sensor](https://www.digitspace.com/ml8511-uv-light-detection-sensor-module-for-arduino?5bf8797b7ae48ca3) [ml8511 with micro:bit](http://www.microbitlearning.com/code/arduino/microbit-ml8511-sensor-example.php)
+* [Uv sensor](https://www.digitspace.com/ml8511-uv-light-detection-sensor-module-for-arduino?5bf8797b7ae48ca3) [Tutorial: ml8511 with micro:bit](http://www.microbitlearning.com/code/arduino/microbit-ml8511-sensor-example.php)
 * I would add a [visual rgb indicator](https://www.digitspace.com/products/micro-bit/breakout/bbc-microbit-expansion-board-full-color-led-module-rgb-usb-charging-battery?5bf8797b7ae48ca3). [Tutorials](https://www.yahboom.net/study/LED_Circular) [Details](./RGBRing.md)
 * [Battery box](https://www.digitspace.com/raspberry-pi-pwm-shield-18650?5bf8797b7ae48ca3)
 * I want to use micropython.
