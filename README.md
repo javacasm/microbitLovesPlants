@@ -4,6 +4,18 @@
 
 Take care (in the STEAM way) of  plants/small garden using micro:bit 
 
+
+# Sistema de riego
+
+Vamos a desarrollar con sistema de riego inteligente, que riegue las plantas cuando estén secas. Encenderemos la bomba de riego cuando el sensor de humedad que está en la macenta de nuestra planta dé una medida por debajo de un valor dado.
+
+Usaremos la placa [micro:bit](https://www.digitspace.com/products/micro-bit/official-boards-1/microbit-go-nrf51822-development-board-python-starter?5bf8797b7ae48ca3) como controlador del sistema, programando los prototipos con [bloques](https://makecode.microbit.org/) y con [micropython](https://python.microbit.org/v/2.0)
+
+Iremos desarrollando el proyecto en diferentes fases.
+
+[Digitspace](https://www.digitspace.com?5bf8797b7ae48ca3) ha patrocinado todos los materiales del proyecto
+
+
 ### Entry level
 * Using [micro:bit watering kit](https://www.digitspace.com/products/micro-bit/kit/microbit-kit-automatic-watering-pump-soil-humidity-detection-with-main-board?5bf8797b7ae48ca3)
 * [Some temperature sensors (DHT22 or GY-21-HTU21)](https://www.digitspace.com/sensor-kit-with-45-sensors?5bf8797b7ae48ca3)
