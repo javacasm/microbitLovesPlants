@@ -8,7 +8,7 @@ Iremos desarrollando el proyecto en diferentes fases.
 
 [Digitspace](https://www.digitspace.com?5bf8797b7ae48ca3) ha patrocinado todos los materiales del proyecto
 
-## Fase 1: Controlando una bomba de aguna con un  relé
+## V0: Controlando una bomba de agua con un relé y micro:bit
 
 Vamos a hacer una primera prueba de control de la bomba con el relé, conectado todo a la micro:bit con la GPIO Board, todo los componentes de [micro:bit watering kit](https://www.digitspace.com/products/micro-bit/kit/microbit-kit-automatic-watering-pump-soil-humidity-detection-with-main-board?5bf8797b7ae48ca3) de [digitspace](https://www.digitspace.com?5bf8797b7ae48ca3) y activaremos el riego con los botones de la micro:bit
 
@@ -82,5 +82,4 @@ En este [vídeo](https://youtu.be/tDOVUjIaInU) vemos como activamos y desactivam
 MEJORA: Si está mucho tiempo funcionando a veces se apaga, en 
 v2 vamos a alimentar directnmente la bomba desde la batería sin pasar por el regular de la GPIO board.
 
-### Medida de la humedad
 
