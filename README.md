@@ -16,6 +16,7 @@ Iremos desarrollando el proyecto en diferentes fases.
 
 [Digitspace](https://www.digitspace.com?5bf8797b7ae48ca3) ha patrocinado todos los materiales del proyecto
 
+![DigiSpace](https://www.digitspace.com/image/cache/catalog/first%20page/logo-1x-180x40.png?5bf8797b7ae48ca3)
 
 ### Entry level
 * Using [micro:bit watering kit](https://www.digitspace.com/products/micro-bit/kit/microbit-kit-automatic-watering-pump-soil-humidity-detection-with-main-board?5bf8797b7ae48ca3)
