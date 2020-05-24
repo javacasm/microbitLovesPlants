@@ -18,6 +18,8 @@ Iremos desarrollando el proyecto en diferentes fases.
 
 ![DigiSpace](https://www.digitspace.com/image/cache/catalog/first%20page/logo-1x-180x40.png?5bf8797b7ae48ca3)
 
+[V0: manually operated wattering system](./proyecto.md)
+
 ### Entry level
 * Using [micro:bit watering kit](https://www.digitspace.com/products/micro-bit/kit/microbit-kit-automatic-watering-pump-soil-humidity-detection-with-main-board?5bf8797b7ae48ca3)
 * [Some temperature sensors (DHT22 or GY-21-HTU21)](https://www.digitspace.com/sensor-kit-with-45-sensors?5bf8797b7ae48ca3)
