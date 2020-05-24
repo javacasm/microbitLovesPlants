@@ -4,6 +4,7 @@
 
 Take care (in the STEAM way) of  plants/small garden using micro:bit 
 
+![V0: manually operated](./images/V0.jpg)
 
 # Sistema de riego
 
