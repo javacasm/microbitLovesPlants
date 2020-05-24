@@ -43,8 +43,6 @@ Un programa muy sencillo nos permite encender apagar el relé con los botones A 
 
 [Usando bloques](https://makecode.microbit.org/_iJDE3iHi2eDL):
 
-<div style="position:relative;height:calc(300px + 5em);width:100%;overflow:hidden;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="https://makecode.microbit.org/---codeembed#pub:_iJDE3iHi2eDL" allowfullscreen="allowfullscreen" frameborder="0" sandbox="allow-scripts allow-same-origin"></iframe></div>
-
 Si usamos micropython
 
 ```python
