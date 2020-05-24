@@ -18,9 +18,10 @@ El montaje lo realizamos en una placa de prototipo a la que hemos conectado la G
 
 ![](./images/Micro-bit-GPIO-Expansion-Board.png)
 
-Usamos el módulo con 2 relés (aunque sólo usaremos 1)
+Usamos el módulo con 2 relés (aunque sólo usaremos 1) para encender/apagar la bomba de agua.
 ![Modulo rele](./images/ModuloReleTop.png) 
-para encender/apagar la bomba de agua.
+
+
 
 ![Bomba de agua](./images/WaterPump.png)
 
