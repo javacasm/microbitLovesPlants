@@ -18,7 +18,7 @@ Iremos desarrollando el proyecto en diferentes fases.
 
 ![DigiSpace](https://www.digitspace.com/image/cache/catalog/first%20page/logo-1x-180x40.png?5bf8797b7ae48ca3)
 
-[V0: manually operated wattering system](./proyecto.md)
+[V0: manually operated wattering system](./proyecto.md#v0-controlando-una-bomba-de-agua-con-un-rel%C3%A9-y-microbit)
 
 ### Entry level
 * Using [micro:bit watering kit](https://www.digitspace.com/products/micro-bit/kit/microbit-kit-automatic-watering-pump-soil-humidity-detection-with-main-board?5bf8797b7ae48ca3)
