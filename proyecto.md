@@ -208,6 +208,129 @@ Cuando se detecta que la humedad del suelo es más baja del umbral establecido d
 ![qr](data:image/gif;base64,R0lGODdhmwCbAIAAAAAAAP///ywAAAAAmwCbAAAC/4yPqcvtD6OctNqLs968+w+G4kiW5omm6gq07gvHsjzBydzeL2Yj+A/sMYLEX23nw+lcPOShCI05otScRGgwJpkXbKBKnYKhR+5TubVavGNyo10sq7Pos7nChgfF90y+77W0lwbAN/flpBFI2PF3uGg3GFn4lojY14TJyOFIOWkIJOi50NloKWoKaAlJR4Raqaq5drq5UVpLGoercGtL+0moBew78zrcemiMHLqrfCm5nEqz25sbC/08yruqe+xXF039Gz4pTG792H3+XSx+re3s5h2vni0t5Z4uuy6/Tu+aj5k3cx46EWRlLxi4hOUWGhzHTh82hA/bDaxXMRknbv8A5wU8yHFiSHwgMpL099HhSJDvEGaSKBDlxY4ya1KodnOlyn0Ml7HU6HHWu5fa+vXc1nInUJtyikIEJeonvJQWbbq8MpJoVKVTZ4rkeTUCzqZbqx51plVhUp7/YKLtAjEsBJNllyJ1G/Ae1I1rYco9ivPv3iFPsfZ1anYwv6x87QqG5Vcn27yUiTnWExMwY6+I8TbEHBc017adS5OuKxqU6M2Lh1ZuvZpi7JOaXXM+rXa16tm4b7+uPXvyity0URt9PFyFUeMYCyd/vpz4cefPh0f/HKZZ9e0+FzKneXY76O/TgqIr/jsw9WxjyNP+S7A3bNOG4bgfCxm97/1MpTf/r/IWYYmlx1p4Atrnn1nweUegbf0d2BUeoyVY3lz1KGaghcJpWCFwUTQVX34BchhhTgpKhs1uA0I44gPInacegPVlhuGLGZrYoUkhQrjjeS2iRtp0YDHImWxDbnjXeyhmZmSHQYZ2pF0qetYdeE3qN9+VGIJYYHvaYVciXSKOKVSOS0o1ZZhLbvkliWia8CaPZxKpyH9SNqZklHlmV5KdJd6DH5j3rcfliUgSFWiVkYEH6IQlxAnjnCt+cKWQZjp444KH6ZWfpXvSZ96NTx5KZqRWOjofmywSx6mcpxpKZabriWmZmjIK2uBlSNJKQowpwvUqgmD2iCOoimJZrFRe/w5LZ7GjOgnsV8IeSyxZVEFbJpOYDUrqqkU2W+il07J3YbS2Lsqnj6W6iCoKWlJIY5uisiqvCO8yy6i8mor7Zwj3UltuqPt+ah2U6H647o/0hpqWq7Fel2XAEt5KYprPIqsjuDNCnKTF12IsKbYTp8uunr7G+22+2XLcIqTkTuohyxtLLKueNRJqrsIp68rzuT7rXCemN8P8b8fr2mgtwx+rapXBxo6QqNG4eqsu1VI/GHSsQ4vsIZALRxxsv1ZX6vTFXu+sbbepdlr20l/H7GfDTRPdJVcneyp3zVzfvebHLic9995tW322qXfi2/N4CevrNNm70hwc03r77PjhAP+bvO3iAjfO+eMqX05yy4MbTvmskPN2dN/8JRk10KxrPLbqazv8tORp2sg3ppXXrrmbsFcN9sOda917yb+KVTesvE+N9by045488ZvrbroehRv/dNRFtw6vstULLzTj1Hs+brW5Lh949t+3cf3W6tucevjP+4k0nAUC7uyM8nHXdc7+Iz8+y7nrfvr7X8V+wx3uEa6AAASfAE+gQODlr4HvSxzqmPcyC5Kvgj+bWWyuRyzzra5ot8scBkP4u/5NT4DB4VUGS7fB/bmuhbJ7occoKMN66RCHBnxd2AZGwh0eMFslVB4QR3e1iIhNgtw6WLg6uEAi9rCJpTki/KI4siX/JpGK7WPbFSWIN7dRMHe6Ed/BTtZF2l1McSusYrtceMPgpcaMblSe2TzowBaK7jBofFsc4fZBOrrnjvOD2R6P17yMBRBkFMNeEXuGvzBikIsMJF0QYxe2NIIOWYdEWSJDxsHdiTB9KIwhvHI4xhSWUoMsBCUqfWdIP9JxYINEIB45Kcs20vKUtkxlLCc5y/XVcnVPtCIkvdhKtSXRmFDM4h9XqUX3PdF2xfPeF5U4w2ZBD3ObKl4k13fJIZJOk84TZzlt6M1q2m14c0QcB/HnOmq6c1mbfOUWhejIW7Kxnr1kIj7luUl6vrCPPMTiBGFZRnfas5Ot4p9DHwrRiEp0DqIUrahFL4rRjGrUoQUAADs=)
 
 
+[Código micropython](https://github.com/javacasm/microbitLovesPlants/blob/master/code/ControlEncendidoApagadoAutomaticoRiego.py)
+
+```python
+"""
+Encendemos/apagamos el riego (bomba controlada por un relé) automáticamente
+según el valor de un sensor de humedad de suelo:
+* Por debajo de un valor de humedad se enciende el motor
+* Por encima se apaga
+* Se usa un sensor de lluvia para detectar si la planta ya está expulsando
+    agua por abajo
+Controlamos el nivel de agua de un depósito con sensor de nivel de agua
+Si el nivel es bajo el motor se apaga automáticamente
+
+CC by SA by @javacasm
+Junio 2020
+
+"""
+from microbit import *
+
+imageUp = Image("00900:"
+                "09990:"
+                "90909:"
+                "00900:"
+                "00900")
+
+imageDown = Image("00900:"
+                  "00900:"
+                  "90909:"
+                  "09990:"
+                  "00900")
+
+imageFull = Image("99999:"
+                  "99999:"
+                  "99999:"
+                  "99999:"
+                  "99999")
+
+imageHalf = Image("90009:"
+                  "90009:"
+                  "99999:"
+                  "99999:"
+                  "99999")
+
+imageEmpty = Image("90009:"
+                   "90009:"
+                   "90009:"
+                   "90009:"
+                   "99999")
+
+# Valores umbral para activaciones
+alarmaNivelAgua = 400
+humedadParaRiego = 500
+sensorLluviaMojado = 800
+
+humedadSuelo = 0
+valorSensorLluvia = 0
+nivelDeposito = 0
+
+
+def EnciendeRiego():
+    if nivelDeposito > alarmaNivelAgua:
+        if not EstaEncendidoRiego():
+            display.show(imageUp)
+            pin16.write_digital(True)
+            uart.write('############# Enciende Riego')        
+
+def ApagaRiego():
+    if EstaEncendidoRiego():
+        display.show(imageDown)
+        pin16.write_digital(False)
+        uart.write('############# Apaga Riego')
+
+def EstaEncendidoRiego():
+    return pin16.read_digital()
+
+def MostrarNivelAgua():
+    global nivelDeposito, valorSensorLluvia, humedadSuelo
+    if nivelDeposito < alarmaNivelAgua:
+        if EstaEncendidoRiego() :
+            ApagaRiego()
+        display.show(imageEmpty)
+        uart.write('_____________{}<{}'.format(nivelDeposito,alarmaNivelAgua))
+    elif nivelDeposito < 1.5 * alarmaNivelAgua:
+        display.show(imageHalf)
+        uart.write('------------')
+    else:
+        display.show(imageFull)
+        uart.write('#############')
+
+def MedirSensores():
+    global nivelDeposito, valorSensorLluvia, humedadSuelo
+    nivelDeposito = pin2.read_analog()
+    uart.write('NivelDeposito=' + str(nivelDeposito) + '  ')
+    valorSensorLluvia = pin1.read_analog()
+    uart.write('valorSensorLluvia=' + str(valorSensorLluvia) + '  ')
+    # El sensor de humedad es inversamente proporcional a la humedad
+    humedadSuelo = 1023 - pin0.read_analog()
+    uart.write('humedadSuelo=' + str(humedadSuelo) + '\n')
+
+
+def RevisarHumedadSuelo():
+    global nivelDeposito, valorSensorLluvia, humedadSuelo, humedadParaRiego, sensorLluviaMojado
+    if humedadSuelo < humedadParaRiego:
+        # Mantenemos encendido el riego mientras se cumplan estas condiciones
+        while humedadSuelo < humedadParaRiego and valorSensorLluvia > sensorLluviaMojado:
+            EnciendeRiego()
+            MedirSensores()
+        ApagaRiego()
+
+def miMain():
+    # uart.init() # Viene inicializada por defecto
+
+    while True:
+        MedirSensores()
+        MostrarNivelAgua()
+        RevisarHumedadSuelo()
+        if button_a.is_pressed():
+            EnciendeRiego()
+        if button_b.is_pressed():
+            ApagaRiego()
+
+
+```
 
 ## Pinout
 
