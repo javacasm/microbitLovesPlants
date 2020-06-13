@@ -78,7 +78,108 @@ En este [vídeo](https://youtu.be/tDOVUjIaInU) vemos como activamos y desactivam
 
 [![Vídeo: micro:bit controla un relé que enciende apaga una bomba de agua](https://img.youtube.com/vi/tDOVUjIaInU/0.jpg)](https://youtu.be/tDOVUjIaInU)
 
-MEJORA: Si está mucho tiempo funcionando a veces se apaga, en 
-v2 vamos a alimentar directnmente la bomba desde la batería sin pasar por el regular de la GPIO board.
+MEJORA: Si está mucho tiempo funcionando a veces se apaga, puesto que estamos alimentando todo (micro:bit, relés y motores) a través del regulador de alimentación la placa GPIO.
+
+Para evitarlo vamos a alimentar directnmente la bomba desde la batería sin pasar por el regular de la GPIO board.
+
+![Montaje Rele](./images/TestRele3.jpg)
+
+Usaremos los raíles de arriba en la imagen para todos lo que va alimentado desde la placa GPIO. Los raíles de abajo para la conexión directa a los 5V de la batería.
 
 
+
+## Control del nivel de agua del depósito
+
+Usamos un sensor de nivel de agua para detectar cuando nuestro depósito no tiene agua y así apagar el motor cuando no haya suficiente agua.
+
+![](./images/SensorNivelAguaDeposito.jpg)
+
+
+Hemos creado varias funciones, para controlar el riego y para visualizar el nivel de agua en el depósito: **EnciendeRiego**, **ApagaRiego**, **EstáEncendidoRiego** y **MostrarNivelAgua**
+
+TODO: vídeo explicando el programa
+TODO: programa micropython
+
+![](./images/BloquesControlNivelAgua.png)
+
+![](./images/MontajeSensorNivelAgua.jpg)
+
+[Proyecto: Control de nivel de agua del depósito](https://makecode.microbit.org/_a8vYyX6zTWH2)
+
+
+```python
+
+from microbit import *
+
+imageUp = Image("00900:"
+             "09990:"
+             "90909:"
+             "00900:"
+             "00900")
+
+imageDown = Image("00900:"
+             "00900:"
+             "90909:"
+             "09990:"
+             "00900")
+
+imageFull = Image("99999:"
+             "99999:"
+             "99999:"
+             "99999:"
+             "99999")
+
+imageHalf = Image("90009:"
+             "90009:"
+             "99999:"
+             "99999:"
+             "99999")
+
+imageEmpty = Image("90009:"
+             "90009:"
+             "90009:"
+             "90009:"
+             "99999")
+
+alarmaNivelAgua =  400
+
+def EnciendeRiego():
+    if nivelDeposito > alarmaNivelAgua:
+        display.show(imageUp)
+        pin16.write_digital(True) 
+
+def ApagaRiego():
+    display.show(imageDown)
+    pin16.write_digital(False) 
+
+def MostrarNivelAgua():
+    if nivelDeposito < alarmaNivelAgua:
+        display.show(imageEmpty)
+    elif nivelDeposito < 1.5 * alarmaNivelAgua:
+        display.show(imageHalf)
+    else:
+        display.show(imageFull)
+
+p16 = Pin(16, Pin.OUT)
+
+while True:
+    nivelDeposito = 
+    ostrarNivelAgua()
+    if button_a.is_pressed():
+        EnciendeRiego()
+    if button_b.is_pressed():
+        ApagaRiego()
+    
+
+```
+
+[Vídeo del sistema en funcionamiento](https://photos.app.goo.gl/g6w9jHdvzEWb46SQ6)
+
+## Pinout
+
+Relé riego: P16
+Sensor humedad: P0
+Sensor Agua: P1
+Sensor nivel agua: P2
+
+![](./images/pinoutMicrobit.png)
