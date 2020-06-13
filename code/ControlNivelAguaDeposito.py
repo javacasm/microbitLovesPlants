@@ -1,6 +1,7 @@
 """
 Control del nivel de agua de un depósito con sensor de nivel de agua
-Podemos controlar el encendido de un motor de bombeo (por medio de un relé) con lo botones
+Podemos controlar el encendido de un motor de bombeo (por medio de un relé)
+Usando los botones A y B
 Si el nivel es bajo el motor se apaga automáticamente
 
 CC by SA by @javacasm
@@ -66,3 +67,5 @@ while True:
         EnciendeRiego()
     if button_b.is_pressed():
         ApagaRiego()
+
+
