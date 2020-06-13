@@ -1,3 +1,12 @@
+"""
+Control del nivel de agua de un depósito con sensor de nivel de agua
+Podemos controlar el encendido de un motor de bombeo (por medio de un relé) con lo botones
+Si el nivel es bajo el motor se apaga automáticamente
+
+CC by SA by @javacasm
+Junio 2020
+
+"""
 from microbit import *
 
 imageUp = Image("00900:"
