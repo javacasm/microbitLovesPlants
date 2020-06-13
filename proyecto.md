@@ -43,33 +43,42 @@ Un programa muy sencillo nos permite encender apagar el relé con los botones A 
 
 [Usando bloques](https://makecode.microbit.org/_iJDE3iHi2eDL):
 
-Si usamos micropython
+Si usamos [micropython](https://github.com/javacasm/microbitLovesPlants/blob/master/code/testrele.py)
 
 ```python
 
+"""
+Control del encendido/apagado de un relé conectado al pin 16
+con lo botones
+Se muestra una imagen cuando encendido y otra cuando apagado
+
+CC by SA by @javacasm
+Mayo 2020
+"""
 from microbit import *
 
 imageUp = Image("00900:"
-             "09990:"
-             "90909:"
-             "00900:"
-             "00900")
+                "09990:"
+                "90909:"
+                "00900:"
+                "00900")
 
 imageDown = Image("00900:"
-             "00900:"
-             "90909:"
-             "09990:"
-             "00900")
+                  "00900:"
+                  "90909:"
+                  "09990:"
+                  "00900")
 
 while True:
     if button_a.is_pressed():
         display.show(imageUp)
-        pin16.write_digital(True) 
+        pin16.write_digital(True)
     if button_b.is_pressed():
         display.show(imageDown)
-        pin16.write_digital(False) 
+        pin16.write_digital(False)
 
 ```
+
 
 
 En este [vídeo](https://youtu.be/tDOVUjIaInU) vemos como activamos y desactivamos el relé con los pulsadores de la micro:bit
@@ -104,7 +113,7 @@ TODO: vídeo explicando el programa
 [Proyecto: Control de nivel de agua del depósito](https://makecode.microbit.org/_a8vYyX6zTWH2)
 
 
-TODO: programa micropython
+[Programa micropython](https://github.com/javacasm/microbitLovesPlants/blob/master/code/ControlNivelAguaDeposito.py)
 
 
 ```python
@@ -197,6 +206,8 @@ Cuando se detecta que la humedad del suelo es más baja del umbral establecido d
 [Proyecto de bloques](https://makecode.microbit.org/_cYceVT8Tb9bV)
 
 ![qr](data:image/gif;base64,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)
+
+
 
 ## Pinout
 
