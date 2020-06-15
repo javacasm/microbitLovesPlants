@@ -5,14 +5,17 @@
 Usando este módulo microbit-radio (https://github.com/rhubarbdog/microbit-radio)  podemos utilizar el protocolo que usa los bloques de MakeCode para compartir pares etiqueta-valor
 
 
+[Proyecto makecode de ejemplo](https://makecode.microbit.org/_1TAd5D6Vi17C)
+
+![](./images/qr_radio_makecode.gif)
+
+
 ```python
 """
 Usando este módulo microbit-radio (https://github.com/rhubarbdog/microbit-radio)  podemos utilizar el protocolo que usa los bloques de MakeCode para compartir pares etiqueta-valor
 
 
-# Proyecto makecode de ejemplo https://makecode.microbit.org/_1TAd5D6Vi17C
-# ![](./images/qr_radio_makecode.gif)
-
+Proyecto makecode de ejemplo https://makecode.microbit.org/_1TAd5D6Vi17C
 
 CC by SA by @javacasm
 Junio 2020
