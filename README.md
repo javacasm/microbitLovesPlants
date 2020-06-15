@@ -32,6 +32,7 @@ TODO: V1.5 Consola de colores con el estado del sistema
 
 ## Project definition
 
+
 ### Entry level
 * Using [micro:bit watering kit](https://www.digitspace.com/products/micro-bit/kit/microbit-kit-automatic-watering-pump-soil-humidity-detection-with-main-board?5bf8797b7ae48ca3)
 * [Some temperature sensors (DHT22 or GY-21-HTU21)](https://www.digitspace.com/sensor-kit-with-45-sensors?5bf8797b7ae48ca3)
