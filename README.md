@@ -20,6 +20,18 @@ Iremos desarrollando el proyecto en diferentes fases.
 
 [V0: manually operated wattering system](./proyecto.md#v0-controlando-una-bomba-de-agua-con-un-rel%C3%A9-y-microbit)
 
+[V0.1 Mejora: alimentación independiente de la bomba de riego](https://github.com/javacasm/microbitLovesPlants/blob/master/proyecto.md#alimentaci%C3%B3n-independiente-del-motor-v01)
+
+
+[V0.5 Control de nivel de agua en el depósito](https://github.com/javacasm/microbitLovesPlants/blob/master/proyecto.md#control-del-nivel-de-agua-del-dep%C3%B3sito-v05)
+
+[V1.0 Sistema automático de riego con micro:bit](https://github.com/javacasm/microbitLovesPlants/blob/master/proyecto.md#encendido-y-apagado-autom%C3%A1tico-v10)
+
+TODO: V1.5 Consola de colores con el estado del sistema
+
+
+## Project definition
+
 ### Entry level
 * Using [micro:bit watering kit](https://www.digitspace.com/products/micro-bit/kit/microbit-kit-automatic-watering-pump-soil-humidity-detection-with-main-board?5bf8797b7ae48ca3)
 * [Some temperature sensors (DHT22 or GY-21-HTU21)](https://www.digitspace.com/sensor-kit-with-45-sensors?5bf8797b7ae48ca3)
