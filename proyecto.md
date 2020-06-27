@@ -106,7 +106,6 @@ Usamos un sensor de nivel de agua para detectar cuando nuestro depósito no tien
 
 Hemos creado varias funciones, para controlar el riego y para visualizar el nivel de agua en el depósito: **EnciendeRiego**, **ApagaRiego**, **EstáEncendidoRiego** y **MostrarNivelAgua**
 
-TODO: vídeo explicando el programa
 
 ![](./images/BloquesControlNivelAgua.png)
 
@@ -199,10 +198,31 @@ El sensor de lluvia da un valor de 1023 en el aire y baja de 800 cuando lo mojam
 
 ![](./images/MontajeCompleto.jpg)
 
+### Montaje
+
+![micro:bitLovePlant_bb.png](./images/micro:bitLovePlant_bb.png)
+
+
+Relé riego: P16
+Sensor humedad: P0
+Sensor Agua: P1
+Sensor nivel agua: P2
+
+Alimentación: batería 18650 con adaptador a USB y salida 5V
+
 ### Programación
 
 Cuando se detecta que la humedad del suelo es más baja del umbral establecido de enciende el riego hasta que se detecta que el agua sale de la maceta, momento en el que cortamos el riego.
 
+Hemos creado procedimientos para realizar las distintas tareas:
+
+* **EnciendeRiego:** comprueba que hay suficiente nivel de agua en el depósito y si es así enciende el relé de la bomba.
+* **ApagaRiego:** apaga el relé que controla la bomba.
+* **MostrarNivelAgua:** muestra en los leds el nivel del depósito.
+* **EstaEncendidoRiego:** Devuelve el valor del pin16 que controla el relé de la bomba.
+* **MedirSensores:** Lee los 3 sensores: humedad del suelo, nivel del depósito y si sale agua de la maceta y los guarda en las variables. Envía los valores por el puerto serie para verlos en el PC.
+* **RevisarHumedadSuelo:** Compara el valor de humedad actual con el valor establecido y activa o no el sistema de riego.
+* **Al iniciar:** establece los valores de los valores umbral.
 
 ![](./images/BloquesEncendidoApagadoAutmaticoRiego.png)
 
@@ -338,11 +358,23 @@ def miMain():
 
 ```
 
-## Pinout
 
-Relé riego: P16
-Sensor humedad: P0
-Sensor Agua: P1
-Sensor nivel agua: P2
+## Deterioro sensores
 
+El uso continuado de los sensores introducidos en agua da lugar a un rápido deterioro de los mismos debido a que al tener una diferencia de potencial entre ellos se produce la electrolisis, produciéndose corrosión en el lado positivo.
+
+En las imágenes se puede apreciar:
+
+![](./images/DeterioroSensorNivel1.jpg)
+![](./images/DeterioroSensorHumedad2.jpg)
+
+Para evitarlo podríamos hacer que los sensores estuvieran encendidos sólo el tiempo que necesitamos medir. De esta manera su duración sería mayor.
+
+
+## Pinout micro:bit
 ![](./images/pinoutMicrobit.png)
+
+## Futuras versiones:
+
+* Conexión vía radio con una centralita dentro de la casa que muestra el estado del sistema, avisando de que falta agua al depósito y del estado de humedad
+* Añadir sensores de humedad, temperatura y radiación UVA
