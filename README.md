@@ -27,8 +27,6 @@ Iremos desarrollando el proyecto en diferentes fases.
 
 [V1.0 Sistema automático de riego con micro:bit](https://github.com/javacasm/microbitLovesPlants/blob/master/proyecto.md#encendido-y-apagado-autom%C3%A1tico-v10)
 
-TODO: V1.5 Consola de colores con el estado del sistema
-
 
 ## Project definition
 
